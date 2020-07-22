@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex10</title>
+  </head>
+  <body>
+    <button onclick="primo()">Click</button>
+
+    <script>
+      /*
+      Crie um programa que exiba em uma tabela e destaque todos os números primos que estão entre 0 e 200.
+      */
+      function primo() {
+        tabelaHTML =
+          "<table><tr><th colspan='50'>Números Primos entre 0 e 200<tr><td>1";
+        var primo,
+          num = 2;
+        while (num <= 200) {
+          primo = true;
+          for (let i = 2; num > i; i++) {
+            if (num % i == 0) {
+              primo = false;
+              tabelaHTML += "<td>" + num;
+              break;
+            }
+          }
+          if (primo) {
+            tabelaHTML += "<td bgcolor='#94fdd6'>" + num;
+          }
+          num % 20 == 0 ? (tabelaHTML += "<tr>") : false;
+          num++;
+        }
+        tabelaHTML += "</table>";
+        document.write(tabelaHTML);
+      }
+    </script>
+  </body>
+</html>

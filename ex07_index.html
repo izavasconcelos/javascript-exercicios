@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex07</title>
+  </head>
+  <body>
+    <button onclick="numeros()">Clique aqui</button>
+    <script>
+      /*
+    Se listarmos todos os números naturais abaixo de 10 que são múltiplos de 3 ou 5, obtemos 3, 5, 6 e 9. A soma desses múltiplos é 23.
+    Faça um programa JavaScript que encontre a soma de todos os múltiplos de 3 ou 5 abaixo de 1000.
+    */
+
+      function numeros() {
+        var cont = 0;
+        for (let i = 3; i < 1000; i++) {
+          if (i % 3 == 0 || i % 5 == 0) cont += i;
+        }
+        document.write(cont);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex13</title>
+  </head>
+  <body>
+    <h1>Potenciação</h1>
+    <label for="a">Base</label>
+    <input id="a" type="number" min="0" />
+    <label for="n">Expoente</label>
+    <input id="n" type="number" min="0" />
+    <label id="res" for="res">Resultado:</label>
+    <button onclick="pot()">Click</button>
+    <script>
+      /*
+    1) Elaborar um programa que apresente o resultado de uma operação de potenciação com números aleatórios, inteiros e positivos;
+    2) Apresente os números envolvidos na operação (base, expoente e potência/resultado);
+    3) O exercício de deverá ser elaborado SEM o uso de função JavaScript Math.pow();
+    Observação:
+
+    A potenciação (ou exponenciação) é uma operação onde um dado número é multiplicado por ele mesmo, uma quantidade 'n' de vezes.
+    an = b
+    Onde:
+      a = base;
+      n = expoente;
+      b = potência.
+    */
+      function pot() {
+        var a = document.getElementById("a").value;
+        var n = document.getElementById("n").value;
+        var b = 1;
+        for (let i = 0; i < n; i++) {
+          b *= a;
+        }
+        document.getElementById("res").innerText = " Resultado:  " + b + "    ";
+      }
+    </script>
+  </body>
+</html>

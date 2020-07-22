@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex12</title>
+  </head>
+  <body>
+    <h1>Invertendo a sequência</h1>
+    <label for="caracteres">Digite aqui: </label>
+    <input id="caracteres" type="text" />
+    <button onclick="inverter()">Click</button>
+    <div id="res"></div>
+    <script>
+      /*
+    Dada uma sequência de caracteres, inverta o seu conteúdo e apresente ao usuário o resultado invertido.
+
+    Não utilize funções nativas do JavaScript.
+    */
+      function inverter() {
+        var a = document.getElementById("caracteres").value;
+        var newA = "";
+        for (let i = 0; i < a.length; i++) {
+          newA += a[a.length - 1 - i];
+        }
+        document.getElementById("res").innerHTML =
+          "<h2>" + "Palavra invertida:  " + newA + "</h2>";
+      }
+    </script>
+  </body>
+</html>

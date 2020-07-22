@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex09</title>
+  </head>
+  <body>
+    <button onclick="primo()">Clique aqui</button>
+    <div id="primos"></div>
+    <script>
+      /*
+      Listando os seis primeiros números primos: 2, 3, 5, 7, 11 e 13, podemos ver que o sexto primo é 13.
+      Qual é o 1001º número primo? Faça um programa JavaScript que apresente esse número para o usuário.
+      */
+      function primo() {
+        var primo,
+          num = 2,
+          cont = 0;
+        while (cont < 1001) {
+          primo = true;
+          for (let i = 2; num > i; i++) {
+            if (num % i == 0) {
+              primo = false;
+              break;
+            }
+          }
+          if (primo) cont++;
+          num++;
+        }
+        num--;
+        document.getElementById("primos").innerHTML =
+          "Número primo 1001º é: " + num;
+      }
+    </script>
+  </body>
+</html>
